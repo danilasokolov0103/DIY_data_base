@@ -55,13 +55,16 @@ def main():
                             1], data_base, list_of_set_values)
                     except IndexError:
                         print(info)
+                
                 elif get_user_command.split()[0] == "ROLLBACK":
                     rollback(data_base)
 
                 elif get_user_command.split()[0] == "COMMIT":
                     commit(data_base)
+                
                 elif get_user_command.split()[0] == "BEGIN":
                     pass
+                
                 else:
                     print('COMMIT YOUR TRANSACTION')
 
@@ -88,6 +91,7 @@ def main():
                     delete_key(get_user_command.split()[1])
                 except IndexError:
                     print(info)
+            
             elif get_user_command.split()[0] == "COUNTS":
                 try:
                     count(get_user_command.split()[1])
@@ -126,4 +130,5 @@ def count(value):
     print(number_of_same_values)
 
 
-main()
+if __name__ == "__main__":
+    main()
