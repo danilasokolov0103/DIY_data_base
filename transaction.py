@@ -35,7 +35,9 @@ def count_transaction(value, data_base, list_of_last_set_values):
 
 def rollback(data_base):
     for key in data_base:
-        data_base[key] = data_base[key][0]
+        if isinstance(data_base[key], list):
+            data_base[key] = data_base[key][0]
+
 
 
 def commit(data_base):

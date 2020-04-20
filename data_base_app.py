@@ -67,7 +67,7 @@ def main():
                 
                 else:
                     print('COMMIT YOUR TRANSACTION')
-
+                
             get_user_command = input(">>")
 
         else:
@@ -100,7 +100,7 @@ def main():
 
             else:
                 print(info)
-
+            
             get_user_command = input(">>")
 
     print("FINIHING PROGRAMM")
